@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Button from '../components/button.jsx';
 
 class App extends Component {
   render() {
     return (
-      <div>Hello, World</div>
+      <div>
+        <Button />
+      </div>
     );
   }
 }

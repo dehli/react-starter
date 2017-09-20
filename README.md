@@ -7,4 +7,3 @@
 - TDD
 - Redux (or Mobx, etc.)
 - Folder hierarchy (extensions)
-- Styled components
