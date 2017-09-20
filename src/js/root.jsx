@@ -1,15 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
-// TODO:
-// Linting (prettifier)
-// Routing
-// Minification
-// Babel
-// Flow
-// TDD
+import App from './containers/app.jsx';
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <App />,
   document.getElementById('root')
 );
