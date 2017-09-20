@@ -1,2 +1,2 @@
-export const blue = '#00f';
+export const blue = '#005d8e';
 export const white = '#fff';
