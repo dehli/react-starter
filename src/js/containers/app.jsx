@@ -9,12 +9,9 @@ type State = {
 
 class App extends Component<{}, State> {
 
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      counter: 0
-    };
-  }
+  state = {
+    counter: 0
+  };
 
   _onButtonClick = () => {
     const { counter } = this.state;
@@ -23,14 +20,16 @@ class App extends Component<{}, State> {
 
   render() {
     const { counter } = this.state;
-    return (
-      <div>
-        <Button primary onClick={this._onButtonClick}>
-          Click Me!
-        </Button>
-        <span>{counter}</span>
-      </div>
-    );
+    return [
+
+      <Button key="containers-app-btn"
+        primary
+        onClick={this._onButtonClick}>
+        Click Me!
+      </Button>,
+
+      <span key="containers-app-span">{counter}</span>
+    ];
   }
 }
 

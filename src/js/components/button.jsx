@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import type { Node } from 'react';
 import styled from 'styled-components';
-import { blue, white } from '../constants/colors.js';
+import { blue, red, white } from '../constants/colors.js';
 
 type Props = {
   primary?: boolean,
@@ -20,7 +20,7 @@ const Button = styled.button`
   padding: 0.25em 1em;
 
   &:focus {
-    border-color: red;
+    border-color: ${red};
     outline: 0;
   }
 `;

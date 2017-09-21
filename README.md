@@ -3,7 +3,7 @@
 - Linting (prettifier)
 - Routing
 - Minification
-- Flow
+- Flow-typed
 - TDD
 - Redux (or Mobx, etc.)
 - Folder hierarchy (extensions)
