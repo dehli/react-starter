@@ -1,6 +1,5 @@
 ### TODO
 
-- Linting (prettifier)
 - Routing
 - Minification
 - TDD

@@ -1,14 +1,22 @@
 {
-    "env": {
-      "browser": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:flowtype/recommended",
-      "plugin:react/recommended"
-    ],
-    "plugins": [
-        "flowtype",
-        "react"
-    ]
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "plugins": [
+    "flowtype",
+    "react"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  }
 }

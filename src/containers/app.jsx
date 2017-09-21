@@ -1,19 +1,17 @@
 // @flow
 
 import React, { Component } from 'react';
-import Button from 'src/components/button.jsx';
+import Button from 'src/components/button';
 
 type State = {
   counter: number
 };
-
 class App extends Component<{}, State> {
-
   state = {
-    counter: 0
+    counter: 0,
   };
 
-  _onButtonClick = () => {
+  onButtonClick = () => {
     const { counter } = this.state;
     this.setState({ counter: counter + 1 });
   }
@@ -22,13 +20,15 @@ class App extends Component<{}, State> {
     const { counter } = this.state;
     return [
 
-      <Button key="containers-app-btn"
+      <Button
+        key="containers-app-btn"
         primary
-        onClick={this._onButtonClick}>
+        onClick={this.onButtonClick}
+      >
         Click Me!
       </Button>,
 
-      <span key="containers-app-span">{counter}</span>
+      <span key="containers-app-span">{counter}</span>,
     ];
   }
 }

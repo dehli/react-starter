@@ -3,7 +3,7 @@
 import React from 'react';
 import type { Node } from 'react';
 import styled from 'styled-components';
-import { blue, red, white } from 'src/constants/colors.js';
+import { blue, red, white } from 'src/constants/colors';
 
 type Props = {
   primary?: boolean,
@@ -11,10 +11,10 @@ type Props = {
 };
 
 const ButtonWrapper = styled.button`
-  background-color: ${props => props.primary ? blue : white};
+  background-color: ${(props: Props) => (props.primary ? blue : white)};
   border: 2px solid ${blue};
   border-radius: 3px;
-  color: ${props => props.primary ? white : blue};
+  color: ${(props: Props) => (props.primary ? white : blue)};
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
@@ -33,4 +33,8 @@ export default function Button(props: Props) {
   );
 }
 
+Button.defaultProps = {
+  primary: false,
+  children: null,
+};
 Button.displayName = 'Button';
