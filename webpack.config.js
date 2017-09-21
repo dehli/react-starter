@@ -1,6 +1,5 @@
 const path = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, 'build');
 const APP_DIR = path.resolve(__dirname, 'src');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -11,9 +10,9 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-    entry: `${APP_DIR}/js/root.jsx`,
+    entry: path.resolve(APP_DIR, 'js/root.jsx'),
     output: {
-        path: BUILD_DIR,
+        path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
     module: {
@@ -21,5 +20,11 @@ module.exports = {
         { test: /\.js?x$/, loader: 'babel-loader', exclude: /node_modules/ }
       ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig],
+
+    resolve: {
+        alias: {
+            src: APP_DIR + '/js'
+        }
+    }
 };

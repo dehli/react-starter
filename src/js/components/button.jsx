@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import type { Node } from 'react';
 import styled from 'styled-components';
-import { blue, red, white } from '../constants/colors.js';
+import { blue, red, white } from 'src/constants/colors.js';
 
 type Props = {
   primary?: boolean,
