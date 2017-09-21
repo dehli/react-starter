@@ -21,11 +21,13 @@ module.exports = {
     ],
   },
   plugins: [HtmlWebpackPluginConfig],
-
   resolve: {
     alias: {
       src: APP_DIR,
     },
     extensions: ['.js', '.jsx'],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
 };

@@ -19,7 +19,6 @@ class App extends Component<{}, State> {
   render() {
     const { counter } = this.state;
     return [
-
       <Button
         key="containers-app-btn"
         primary
