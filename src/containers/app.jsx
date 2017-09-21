@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react';
-import Button from '../components/button.jsx';
+import Button from 'src/components/button.jsx';
 
 type State = {
   counter: number

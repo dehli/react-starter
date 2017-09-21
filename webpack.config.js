@@ -10,7 +10,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-    entry: path.resolve(APP_DIR, 'js/root.jsx'),
+    entry: path.resolve(APP_DIR, 'root.jsx'),
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
@@ -24,7 +24,7 @@ module.exports = {
 
     resolve: {
         alias: {
-            src: APP_DIR + '/js'
+            src: APP_DIR
         }
     }
 };
