@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
 import type { Node } from 'react';
 import styled from 'styled-components';
 import { blue, red, white } from 'src/constants/colors.js';
@@ -10,7 +10,7 @@ type Props = {
   children?: Node
 };
 
-const Button = styled.button`
+const ButtonWrapper = styled.button`
   background-color: ${props => props.primary ? blue : white};
   border: 2px solid ${blue};
   border-radius: 3px;
@@ -25,7 +25,12 @@ const Button = styled.button`
   }
 `;
 
-export default (props: Props) =>
-  <Button {...props}>
-    {props.children}
-  </Button>;
+export default function Button(props: Props) {
+  return (
+    <ButtonWrapper {...props}>
+      {props.children}
+    </ButtonWrapper>
+  );
+}
+
+Button.displayName = 'Button';
